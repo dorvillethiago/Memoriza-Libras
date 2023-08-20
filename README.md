@@ -48,6 +48,7 @@ O Projeto Libras é um projeto de código aberto e adoraríamos receber contribu
 - [Thiago Dorville](https://github.com/dorvillethiago)
 - [Hugo Lessa](https://github.com/keikotatch)
 - [Eugenio Fernandes](https://github.com/Eugenio1997)
+- [Nathalya Lessa](https://github.com/nathalyalessa09/Loading )
 
 ## Licença
 

@@ -37,7 +37,7 @@ O Projeto Libras é um projeto de código aberto e adoraríamos receber contribu
 
 ## Como Executar Localmente
 
-1. Clone este repositório: `git clone https://github.com/seu-usuario/projeto-libras.git`
+1. Clone este repositório: `git clone https://github.com/dorvillethiago/projeto-libras.git`
 2. Instale as dependências: `npm install`
 3. Inicie o servidor de desenvolvimento: `npm start`
 4. Acesse a aplicação em seu navegador: `http://localhost:3000`
@@ -48,7 +48,7 @@ O Projeto Libras é um projeto de código aberto e adoraríamos receber contribu
 - [Thiago Dorville](https://github.com/dorvillethiago)
 - [Hugo Lessa](https://github.com/keikotatch)
 - [Eugenio Fernandes](https://github.com/Eugenio1997)
-- [Nathalya Lessa](https://github.com/nathalyalessa09/Loading )
+- [Nathalya Lessa](https://github.com/nathalyalessa09)
 
 ## Licença
 

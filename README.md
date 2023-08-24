@@ -42,17 +42,25 @@ O Projeto Libras é um projeto de código aberto e adoraríamos receber contribu
 3. Inicie o servidor de desenvolvimento: `npm start`
 4. Acesse a aplicação em seu navegador: `http://localhost:3000`
 
+## Tecnologias
+
+- TypeScript
+- ESLint
+- ReactJS
+- TailwindCSS
+- Vite
+- Framer Motion
+
 ## Contribuidores
 
 - [Mikael Teixeira](https://github.com/Atlas-Tenebris)
 - [Thiago Dorville](https://github.com/dorvillethiago)
 - [Hugo Lessa](https://github.com/keikotatch)
 - [Eugenio Fernandes](https://github.com/Eugenio1997)
-- [Nathalya Lessa](https://github.com/nathalyalessa09/Loading )
+- [Nathalya Lessa](https://github.com/nathalyalessa09/Loading)
 
 ## Licença
 
-Este projeto é licenciado sob a Licença MIT. Veja o arquivo [LICENSE MIT](LICENSE) para mais detalhes.
----
+## Este projeto é licenciado sob a Licença MIT. Veja o arquivo [LICENSE MIT](LICENSE) para mais detalhes.
 
 Para obter informações sobre o Projeto Libras e nosso compromisso com o ensino da linguagem de sinais por meio da gamificação, entre em contato conosco em [projetolibras@outlook.com](mailto:projetolibras@outlook.com).

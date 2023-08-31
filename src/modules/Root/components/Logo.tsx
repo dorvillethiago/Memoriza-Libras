@@ -1,14 +1,12 @@
 import Mao from '../assets/mao_menu.png'
-import Titulo from '../assets/titulo_menu.png'
+import Titulo from './Titulo'
 
 export default function Logo() {
     return (
-        <div className="flex relative w-[630px] h-[293px] items-center">
+        <div className="flex relative w-[670px] h-[293px] items-center">
             <img alt="ícone de mão"
                  src={Mao}/>
-            <img alt="logo principal"
-                 src={Titulo} 
-                 className="absolute right-0 bottom-10"/>
+            <Titulo className="absolute right-0 bottom-5"/>
         </div>
     )
 }

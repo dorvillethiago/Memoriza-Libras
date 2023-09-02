@@ -24,7 +24,7 @@ body {
   flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
-  background-image: url(./src/modules/Root/assets/background_primario.png);
+  background-image: url(assets/background_primario.png);
   background-repeat: repeat !important;
-  background-size: cover;
+  background-size: contain;
 }

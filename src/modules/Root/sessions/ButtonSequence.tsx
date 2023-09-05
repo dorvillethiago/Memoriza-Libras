@@ -26,7 +26,7 @@ export default function ButtonSequence() {
                             page={""}
                             title={"COMO JOGAR"}/>
             <ButtonRedirect mobile={windowDimensions.width < 400}
-                            page={""}
+                            page={"/credits"}
                             title={"CRÉDITOS"}/>
         </motion.div>
     )

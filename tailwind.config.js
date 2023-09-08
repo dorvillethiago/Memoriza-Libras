@@ -6,6 +6,16 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'smartphone': '330px',
+        // => @media (min-width: 330px) { ... }
+
+        'tablet': '768px',
+        // => @media (min-width: 768px) { ... }
+
+        'laptop': '1024px',
+        // => @media (min-width: 768px) { ... }
+      },
       colors: {
         'text': '#080519',
         'background': '#e8e6ff',

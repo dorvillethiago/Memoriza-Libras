@@ -21,20 +21,20 @@ export default function CreditScreen() {
             initial={{ y: 100, opacity: 0}}
             animate={{ y: 0, opacity: 100}}
             className={`flex flex-row items-center justify-center bg-gap-20 bg-purple-700 rounded-[17px]
-                smartphone:absolute smartphone:h-[850px] smartphone:w-[320px] smartphone:bg-[#453C85]
+                smartphone:absolute smartphone:h-[650px] smartphone:w-[250px] smartphone:bg-[#453C85]
                 tablet:absolute tablet:w-[750px] tablet:h-[520px]
                 laptop:w-[1000px] laptop:h-[520px] laptop:relative`}>
             <div className={
-                `smartphone:absolute smartphone:h-[850px] smartphone:w-[320px] smartphone:bg-[#6456C8] smartphone:left-6 smartphone:top-8
+                `smartphone:absolute smartphone:h-[650px] smartphone:w-[250px] smartphone:bg-[#6456C8] smartphone:left-6 smartphone:top-8
                 tablet:absolute tablet:w-[750px] tablet:h-[520px] tablet:bg-[#6456C8] tablet:left-6 tablet:top-8
                 laptop:absolute laptop:w-[1000px] laptop:h-[520px] laptop:bg-[#6456C8] laptop:left-6 laptop:top-8
                 rounded-[17px]`
             }/>
             <div className={`
-                smartphone:absolute smartphone:h-[850px] smartphone:w-[336px]  smartphone:bg-[#6456C8] smartphone:left-6 smartphone:top-8 smartphone:pt-[20px] smartphone:pb-[30px] smartphone:pl-[20px]
-                tablet:absolute tablet:grid-cols-2 tablet:w-[750px] tablet:h-[520px] tablet:bg-[#6456C8] tablet:left-6 tablet:top-8
-                laptop:w-[1000px] laptop:h-[520px] laptop:grid-cols-3 laptop:left-6 laptop:top-8 laptop:p-[50px]
-                rounded-[17px] flex flex-row grid items-center gap-2
+                smartphone:absolute smartphone:h-[650px] smartphone:w-[250px]  smartphone:bg-[#6456C8] smartphone:left-6 smartphone:top-8 smartphone:pt-[20px] smartphone:pb-[30px] smartphone:pl-[20px]
+                tablet:absolute tablet:grid-cols-2 tablet:w-[750px] tablet:h-[520px] tablet:bg-[#6456C8] tablet:left-6 tablet:top-8 tablet:gap-2
+                laptop:w-[1000px] laptop:h-[520px] laptop:grid-cols-3 laptop:left-6 laptop:top-8 laptop:p-[50px] laptop:gap-2
+                rounded-[17px] flex flex-row grid items-center
             `}>
               <ColaboradorCard src={ThiagoDorville} firstName={'THIAGO'} surName={'DORVILLE'} duty={'Desenvolvedor'} organizor={'Organizador'}></ColaboradorCard>
               <ColaboradorCard src={NathalyaArcida} firstName={'NATHALYA'} surName={'ARCIDA'} duty={'Pesquisa'}></ColaboradorCard>

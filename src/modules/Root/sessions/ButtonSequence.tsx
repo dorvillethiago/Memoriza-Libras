@@ -18,16 +18,32 @@ export default function ButtonSequence() {
         <motion.div
             initial={{ y: 100, opacity: 0}}
             animate={{ y: 0, opacity: 100}}
-            className={`flex flex-col gap-8`}>
-            <ButtonRedirect mobile={windowDimensions.width < 400}
-                            page={""}
-                            title={"JOGAR"}/>
-            <ButtonRedirect mobile={windowDimensions.width < 400}
-                            page={""}
-                            title={"COMO JOGAR"}/>
-            <ButtonRedirect mobile={windowDimensions.width < 400}
-                            page={"/credits"}
-                            title={"CRÉDITOS"}/>
+            className={`flex flex-col gap-8 items-center`}>
+            {windowDimensions.width > 730 &&
+            <div className={`flex items-center gap-8 flex-col`}>
+                <div className={`flex flex-row gap-8`}>
+                    <ButtonRedirect page={""}
+                                    title={"JOGAR"}/>
+                    <ButtonRedirect page={""}
+                                    title={"COMO JOGAR"}/>
+                </div>
+                <ButtonRedirect page={""}
+                                title={"CRÉDITOS"}/>
+            </div>
+            }
+            {windowDimensions.width <= 730 &&
+                <div className={`flex items-center gap-8 flex-col`}>
+                    <ButtonRedirect mobile={windowDimensions.width < 400}
+                                    page={""}
+                                    title={"JOGAR"}/>
+                    <ButtonRedirect mobile={windowDimensions.width < 400}
+                                    page={""}
+                                    title={"COMO JOGAR"}/>
+                    <ButtonRedirect mobile={windowDimensions.width < 400}
+                                    page={""}
+                                    title={"CRÉDITOS"}/>
+                </div>
+            }
         </motion.div>
     )
 }

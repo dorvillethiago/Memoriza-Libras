@@ -1,3 +1,5 @@
+import "@utils/NoFlicker.css"
+
 interface TitleProps {
     className?: string;
     rotate?: boolean;

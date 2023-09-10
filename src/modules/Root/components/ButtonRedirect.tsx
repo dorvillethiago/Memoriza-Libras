@@ -32,6 +32,7 @@ export default function ButtonRedirect({page, title, mobile = false}: ButtonRedi
                 className={`relative w-[300px] h-[71px] no-flicker`}>
                 <div className={`absolute w-[300px] h-[71px] bg-[#453C85] rounded-[17px] -z-10 right-3 bottom-3`}/>
                 <button
+                    onMouseOver={() => {}}
                     className={`bg-[#6456C8] text-background w-[300px] h-[71px] rounded-[17px] text-[23px] font-extrabold tracking-wide`}
                     onClick={() => {
                         navigate(page);

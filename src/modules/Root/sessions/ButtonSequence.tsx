@@ -27,7 +27,7 @@ export default function ButtonSequence() {
                     <ButtonRedirect page={""}
                                     title={"COMO JOGAR"}/>
                 </div>
-                <ButtonRedirect page={""}
+                <ButtonRedirect page={"/credits"}
                                 title={"CRÉDITOS"}/>
             </div>
             }
@@ -40,7 +40,7 @@ export default function ButtonSequence() {
                                     page={""}
                                     title={"COMO JOGAR"}/>
                     <ButtonRedirect mobile={windowDimensions.width < 400}
-                                    page={""}
+                                    page={"/credits"}
                                     title={"CRÉDITOS"}/>
                 </div>
             }

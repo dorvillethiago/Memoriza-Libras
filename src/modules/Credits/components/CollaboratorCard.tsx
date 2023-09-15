@@ -1,4 +1,4 @@
-import "./CollaboratorShadow.css"
+import './CollaboratorShadow.css'
 
 interface CollaboratorCardProps {
     img: string;
@@ -13,7 +13,7 @@ export default function CollaboratorCard({ img, firstName, lastName, role, mobil
         return (
             <div className="flex flex-col items-center gap-4 w-[200px] py-2">
                 <img src={img}
-                    className="rounded-full collaborator-shadow"
+                    className="rounded-full"
                     width={120}
                     height={120}
                     alt={`card-${firstName}_${lastName}`} />
@@ -29,7 +29,7 @@ export default function CollaboratorCard({ img, firstName, lastName, role, mobil
         return (
             <div className="flex items-center gap-4 w-[270px] py-2">
                 <img src={img}
-                    className="rounded-full"
+                    className="rounded-full collaborator-shadow"
                     width={120}
                     height={120}
                     alt={`card-${firstName}_${lastName}`} />

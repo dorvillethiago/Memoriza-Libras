@@ -19,7 +19,7 @@ export default function LogoContainer() {
             className={`cursor-pointer`}
             initial={{y: -100, opacity: 0}}
             animate={{y: 0, opacity: 100}}>
-            <Logo mobile={windowDimensions.width < 700}/>
+            <Logo mobile={windowDimensions.width < 730}/>
         </motion.div>
     )
 }

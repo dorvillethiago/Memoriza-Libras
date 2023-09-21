@@ -22,7 +22,7 @@ export default function ButtonSequence() {
             {windowDimensions.width > 730 &&
             <div className={`flex items-center gap-8 flex-col`}>
                 <div className={`flex flex-row gap-8`}>
-                    <ButtonRedirect page={""}
+                    <ButtonRedirect page={"/game"}
                                     title={"JOGAR"}/>
                     <ButtonRedirect page={""}
                                     title={"TUTORIAL"}/>
@@ -34,7 +34,7 @@ export default function ButtonSequence() {
             {windowDimensions.width <= 730 &&
                 <div className={`flex items-center gap-8 flex-col`}>
                     <ButtonRedirect mobile={true}
-                                    page={""}
+                                    page={"/game"}
                                     title={"JOGAR"}/>
                     <ButtonRedirect mobile={true}
                                     page={""}

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./modules/Root/Page.tsx";
 import Credits from "./modules/Credits/Page.tsx"
+import Game from "./modules/Game/Page.tsx";
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
   {
     path: "/credits",
     element: <Credits/>
+  },
+  {
+    path: "/game",
+    element: <Game/>
   }
 ]);
 

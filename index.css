@@ -27,6 +27,16 @@ body {
   background-image: url(assets/background_primario.png);
   background-repeat: repeat !important;
   background-size: contain;
+  animation: moveRight 30s infinite linear normal;
+}
+
+@keyframes moveRight {
+  0%, 100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
 }
 
 /* ===== Scrollbar CSS ===== */

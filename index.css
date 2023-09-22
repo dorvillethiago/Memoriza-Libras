@@ -28,6 +28,7 @@ body {
   background-repeat: repeat !important;
   background-size: contain;
   animation: moveRight 30s infinite linear normal;
+  overflow-x: hidden;
 }
 
 @keyframes moveRight {

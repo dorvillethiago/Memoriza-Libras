@@ -2,6 +2,7 @@ import { useState } from "react";
 import {Letter, getRandomLetter} from "./letterUtils.ts";
 import Header from "./sessions/Header.tsx";
 import MainPictureContainer from "./sessions/MainPictureContainer.tsx";
+import LetterContainer from "./sessions/LetterContainer.tsx";
 
 export default function Game() {
     const [letter] = useState<Letter>(getRandomLetter());
@@ -9,6 +10,7 @@ export default function Game() {
         <div className={`flex w-screen flex-col items-center gap-20 min-h-[700px]`} style={{height: "100svh"}}>
             <Header/>
             <MainPictureContainer letter={letter}/>
+            <LetterContainer/>
         </div>
     )
 }

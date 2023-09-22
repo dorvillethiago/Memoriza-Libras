@@ -1,11 +1,11 @@
 import "../assets/ButtonShadow.css"
 import Tradutor from "../assets/tradutor1.png"
 
-interface LibraSymbomButtonProps {
+interface LibraSymbolButtonProps {
     onClick: () => void
 }
 
-export default function LibraSymbomButton( {onClick} : LibraSymbomButtonProps ) {
+export default function LibraSymbolButton( {onClick} : LibraSymbolButtonProps ) {
     return (
         <button
         className="bg-primary h-[40px] w-[90px] rounded-md button-shadow flex flex-row items-center justify-between px-3 active:scale-75 transition-transform hover:scale-110" 

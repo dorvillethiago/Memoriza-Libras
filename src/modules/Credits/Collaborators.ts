@@ -9,7 +9,7 @@ interface Collaborator {
     firstName: string;
     lastName: string;
     img: string;
-    role: 'Desenvolvedor' | 'Designer' | 'Documentação' | 'Pesquisa';
+    role: 'Desenvolvedor' | 'Designer' | 'Documentação' | 'Pesquisa' | 'Desenvolvedora';
 }
 
 const Collaborators: Collaborator[] = [
@@ -26,11 +26,12 @@ const Collaborators: Collaborator[] = [
         role: 'Pesquisa'
     },
     {
-        firstName: 'Hugo',
-        lastName: 'Lessa',
-        img: HugoLessa,
-        role: 'Designer'
+        firstName: 'Nathalya',
+        lastName: 'Arcida',
+        img: NathalyaArcida,
+        role: 'Desenvolvedora'
     },
+    
     {
         firstName: 'Mikael',
         lastName: 'Henrique',
@@ -38,10 +39,10 @@ const Collaborators: Collaborator[] = [
         role: 'Documentação'
     },
     {
-        firstName: 'Nathalya',
-        lastName: 'Arcida',
-        img: NathalyaArcida,
-        role: 'Documentação'
+        firstName: 'Hugo',
+        lastName: 'Lessa',
+        img: HugoLessa,
+        role: 'Designer'
     },
     {
         firstName: 'Breno',

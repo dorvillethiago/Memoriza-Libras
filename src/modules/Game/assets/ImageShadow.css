@@ -1,3 +1,7 @@
 .image-shadow {
-    box-shadow: -12px -12px 0px 0px #B89DCD;
+    box-shadow: -15px -15px 0px 0px rgba(69, 60, 133, 1);
+}
+
+.color-filter {
+    filter: opacity(0.95) drop-shadow(0 0 0 #6456c8) drop-shadow(0 0 0 #6456c8) drop-shadow(0 0 0 #6456c8);
 }

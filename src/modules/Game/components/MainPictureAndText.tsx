@@ -1,13 +1,16 @@
 import "../assets/BoardShadow.css"
 import "../assets/ImageShadow.css"
-import { Letter } from "../letterUtils"
+import { useSelector } from 'react-redux'
+import {RootState} from "../../../store.ts";
 
 interface MainPictureAndTextProps {
-    letter: Letter;
     mobile?: boolean;
 }
 
-export default function MainPictureAndText({letter, mobile = false}:MainPictureAndTextProps) {
+export default function MainPictureAndText({mobile = false}:MainPictureAndTextProps) {
+
+    const letter = useSelector((state: RootState) => state.letter)
+
     if (mobile) {
         return (
             <div

@@ -1,14 +1,14 @@
 import LetterButton from "../components/LetterButton"
 import { motion } from "framer-motion";
-import {Alphabet, Letter} from "../letterUtils.ts";
-import {useEffect, useState} from "react";
-import {getWindowDimensions} from "../../../utils/getWindowDimensions.ts";
+import { Alphabet } from "../letterUtils.ts";
+import { useEffect, useState } from "react";
+import { getWindowDimensions } from "../../../utils/getWindowDimensions.ts";
+import { useSelector } from 'react-redux'
+import { RootState } from '@/store.ts';
 
-interface LetterContainerProps {
-        letter: Letter
-}
+export default function LetterContainer() {
 
-export default function LetterContainer({letter}: LetterContainerProps) {
+    const letter = useSelector((state: RootState) => state.letter)
 
     const AlphabetList = Alphabet.split('')
 

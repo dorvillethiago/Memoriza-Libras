@@ -1,6 +1,6 @@
 import LetterButton from "../components/LetterButton"
 import { motion } from "framer-motion";
-import {Alphabet} from "../letterUtils.ts";
+import { Alphabet } from "../letterUtils.ts";
 import { useEffect, useState } from "react";
 import { getWindowDimensions } from "@utils/getWindowDimensions.ts";
 

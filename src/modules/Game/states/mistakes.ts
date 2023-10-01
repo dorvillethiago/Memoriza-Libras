@@ -7,7 +7,10 @@ export const mistakesSlice = createSlice({
     name: 'mistakes',
     initialState: initialStateMistakes,
     reducers: {
-        add: (state: string[], action:PayloadAction<string>) => [...state, action.payload],
+        add: (state: string[], action:PayloadAction<string>) => {
+            console.log([...state, action.payload])
+            return [...state, action.payload]
+        },
         reset: () => []
     },
 })

@@ -1,8 +1,8 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { RootState } from '@/store.ts';
 import "../assets/LetterShadow.css";
-import { reset as resetLetter } from "@/modules/Game/states/letter.ts";
-import { increment, reset as resetTries } from '@/modules/Game/states/tries.ts';
+import {handleLetterVerificationLogic} from "@/modules/Game/services/UserInteract.ts";
+import {useEffect, useState} from "react";
 
 interface LetterButtonProps {
     letter_string: string;
@@ -11,35 +11,34 @@ interface LetterButtonProps {
 
 export default function LetterButton({ letter_string, mobile = false}: LetterButtonProps) {
 
-    const tries = useSelector((state: RootState) => state.tries)
+    const mistakes = useSelector((state: RootState) => state.mistakes)
     const letter = useSelector((state: RootState) => state.letter)
-    const dispatch = useDispatch()
+    const [correct, setCorrect] = useState<boolean>(false)
+
+    useEffect(() => {
+        if (correct) {
+            setTimeout(() => {
+                setCorrect(false)
+            }, 300)
+        }
+    }, [correct]);
 
     function handleLetterClick(button_letter: string) {
-        if (button_letter == letter.str)  {
-            dispatch(resetTries())
-            dispatch(resetLetter())
-        } else {
-            if (tries == 2) {
-                dispatch(resetTries())
-                dispatch(resetLetter())
-            } else {
-                dispatch(increment())
-            }
-        }
+        handleLetterVerificationLogic(button_letter)
+        button_letter == letter.str ? setCorrect(true) : setCorrect(false)
     }
 
     {
         if (mobile) return (
-            <button className={`bg-primary text-[16px] font-bold text-background
-         rounded-[15px] w-[26px] h-[50px] hover:scale-110
-          active:scale-75 transition-transform`} onClick={() => handleLetterClick(letter_string)}>
+            <button className={`${mistakes.includes(letter_string) ? 'bg-red-600' : 'bg-primary'} text-[16px] font-bold text-background
+         rounded-[15px] w-[26px] h-[50px] hover:scale-110 transition-all
+          active:scale-75 ${correct ? 'bg-accent' : 'bg-primary'}`} onClick={() => handleLetterClick(letter_string)}>
                 {letter_string}
             </button>
         ); else { return (
-            <button className={`bg-primary text-[20px] font-bold text-background
-     rounded-[15px] w-[55px] h-[55px] letter-shadow hover:scale-110
-      active:scale-75 transition-transform`} onClick={() => handleLetterClick(letter_string)}>
+            <button className={`${mistakes.includes(letter_string) ? 'bg-red-600' : 'bg-primary'} text-[20px] font-bold text-background
+         rounded-[15px] w-[55px] h-[55px] letter-shadow hover:scale-110 transition-all
+          active:scale-75 ${correct ? 'bg-accent' : 'bg-primary'}`} onClick={() => handleLetterClick(letter_string)}>
                 {letter_string}
             </button>
             )

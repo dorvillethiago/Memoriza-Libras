@@ -1,7 +1,7 @@
 import MainPictureAndText from "../components/MainPictureAndText";
 import {motion} from "framer-motion";
 import {useEffect, useState} from "react";
-import {getWindowDimensions} from "../../../utils/getWindowDimensions.ts";
+import {getWindowDimensions} from "@utils/getWindowDimensions.ts";
 
 export default function MainPictureContainer() {
 

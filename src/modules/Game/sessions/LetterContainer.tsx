@@ -2,7 +2,7 @@ import LetterButton from "../components/LetterButton"
 import { motion } from "framer-motion";
 import { Alphabet } from "../letterUtils.ts";
 import { useEffect, useState } from "react";
-import { getWindowDimensions } from "../../../utils/getWindowDimensions.ts";
+import { getWindowDimensions } from "@utils/getWindowDimensions.ts";
 import { useSelector } from 'react-redux'
 import { RootState } from '@/store.ts';
 

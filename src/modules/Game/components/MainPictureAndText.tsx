@@ -1,7 +1,7 @@
 import "../assets/BoardShadow.css"
 import "../assets/ImageShadow.css"
 import { useSelector } from 'react-redux'
-import {RootState} from "../../../store.ts";
+import {RootState} from "@/store.ts";
 
 interface MainPictureAndTextProps {
     mobile?: boolean;

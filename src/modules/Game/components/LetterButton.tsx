@@ -19,7 +19,7 @@ export default function LetterButton({ letter_string, mobile = false}: LetterBut
         if (correct) {
             setTimeout(() => {
                 setCorrect(false)
-            }, 300)
+            }, 500)
         }
     }, [correct]);
 
@@ -28,17 +28,23 @@ export default function LetterButton({ letter_string, mobile = false}: LetterBut
         button_letter == letter.str ? setCorrect(true) : setCorrect(false)
     }
 
+    function handleLetterButtonColor(letter: string ) {
+        if (mistakes.includes(letter)) return 'bg-red-600'
+        if (correct) return 'bg-accent'
+        return 'bg-primary'
+    }
+
     {
         if (mobile) return (
-            <button className={`${mistakes.includes(letter_string) ? 'bg-red-600' : 'bg-primary'} text-[16px] font-bold text-background
+            <button className={`text-[16px] font-bold text-background
          rounded-[15px] w-[26px] h-[50px] hover:scale-110 transition-all
-          active:scale-75 ${correct ? 'bg-accent' : 'bg-primary'}`} onClick={() => handleLetterClick(letter_string)}>
+          active:scale-75 ${handleLetterButtonColor(letter_string)}`} onClick={() => handleLetterClick(letter_string)}>
                 {letter_string}
             </button>
         ); else { return (
-            <button className={`${mistakes.includes(letter_string) ? 'bg-red-600' : 'bg-primary'} text-[20px] font-bold text-background
+            <button className={`text-[20px] font-bold text-background
          rounded-[15px] w-[55px] h-[55px] letter-shadow hover:scale-110 transition-all
-          active:scale-75 ${correct ? 'bg-accent' : 'bg-primary'}`} onClick={() => handleLetterClick(letter_string)}>
+          active:scale-75 ${handleLetterButtonColor(letter_string)}`} onClick={() => handleLetterClick(letter_string)}>
                 {letter_string}
             </button>
             )

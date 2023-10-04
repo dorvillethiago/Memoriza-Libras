@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import "@utils/NoFlicker.css"
+import "@utils/NoFlicker.css";
 import {useState} from "react";
 import Arrow from '../assets/Arrow.svg';
-import "../assets/AnimationUtils.css"
+import Sfx from '../assets/button_sfx.mp3';
+import "../assets/AnimationUtils.css";
 
 interface ButtonRedirectProps {
     page: string,
@@ -12,11 +13,18 @@ interface ButtonRedirectProps {
 export default function ButtonRedirect({page, title, mobile = false}: ButtonRedirectProps) {
     const navigate = useNavigate();
     const [isHover, setIsHover] = useState(false)
+
+    function handleSfx() {
+        const audio = new Audio(Sfx);
+        audio.volume = 0.5;
+        audio.play();
+    }
+
     if (mobile) {
         return (
             <div
                 onClick={() => {
-                    navigate(page);
+                    { navigate(page);  handleSfx()};
                 }}
                 className={`relative w-[200px] h-[61px] no-flicker hover:scale-105 active:scale-75 transition-transform`}>
                 <div className={`absolute w-[200px] h-[61px] bg-[#453C85] rounded-[17px] -z-10 right-3 bottom-3`}/>
@@ -33,7 +41,7 @@ export default function ButtonRedirect({page, title, mobile = false}: ButtonRedi
                 onMouseOver={() => setIsHover(true)}
                 onMouseLeave={() => setIsHover(false)}
             onClick={() => {
-                navigate(page);
+                { navigate(page);  handleSfx()};
             }}
                 className={`relative w-[300px] h-[71px] no-flicker hover:scale-105 active:scale-75 transition-transform`}>
                 <div className={`absolute w-[300px] h-[71px] bg-[#453C85] rounded-[17px] -z-10 right-3 bottom-3`}/>

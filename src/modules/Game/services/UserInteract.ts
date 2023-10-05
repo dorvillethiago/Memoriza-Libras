@@ -1,6 +1,7 @@
 import store from '@/store.ts';
 import { reset as resetLetter } from "@/modules/Game/states/letter.ts";
 import { add, reset as resetMistakes } from "@/modules/Game/states/mistakes.ts";
+import { add as addModal, reset as resetModal } from "@/modules/Game/states/modals.ts"
 
 import CorrectSfx from '../assets/correct.mp3';
 import IncorrectSfx from '../assets/incorrect.mp3';
@@ -38,4 +39,14 @@ function handleLetterVerificationLogic(letter_local: string) {
 
 }
 
-export { handleLetterVerificationLogic };
+function handleOpenModal(modal_string: string) {
+    const modals = store.getState().modals;
+    if (modals.includes(modal_string)) return;
+    store.dispatch(addModal(modal_string))
+}
+
+function handleCloseModal() {
+    store.dispatch(resetModal())
+}
+
+export { handleLetterVerificationLogic, handleOpenModal, handleCloseModal };

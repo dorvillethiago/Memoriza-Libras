@@ -8,7 +8,6 @@ export const mistakesSlice = createSlice({
     initialState: initialStateMistakes,
     reducers: {
         add: (state: string[], action:PayloadAction<string>) => {
-            console.log([...state, action.payload])
             return [...state, action.payload]
         },
         reset: () => []

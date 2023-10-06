@@ -5,6 +5,7 @@ import { add as addModal, reset as resetModal } from "@/modules/Game/states/moda
 
 import CorrectSfx from '../assets/correct.mp3';
 import IncorrectSfx from '../assets/incorrect.mp3';
+import {handleUserCombo, resetUserScore} from "@/modules/Game/services/LocalDataHandler.ts";
 
 //Carregando Sfx
 
@@ -20,18 +21,19 @@ function handleLetterVerificationLogic(letter_local: string) {
     const mistakes = store.getState().mistakes;
 
     if (letter_local == letter.str) {
+        handleUserCombo()
         CorrectSfxObject.play();
         store.dispatch(resetLetter())
         store.dispatch(resetMistakes())
     } else {
         IncorrectSfxObject.play();
+        resetUserScore()
         if (mistakes.length == 2) {
             store.dispatch(add(letter_local))
             setTimeout(() => {
                 store.dispatch(resetLetter())
                 store.dispatch(resetMistakes())
             }, 200)
-
         } else {
             store.dispatch(add(letter_local))
         }

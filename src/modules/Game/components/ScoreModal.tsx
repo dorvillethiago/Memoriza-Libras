@@ -1,7 +1,7 @@
 import {useSelector} from 'react-redux';
 import {RootState} from "@/store.ts";
 import "@utils/Animations.css"
-
+import {getUserScore} from "@/modules/Game/services/LocalDataHandler.ts";
 import {handleCloseModal} from "@/modules/Game/services/UserInteract.ts";
 import React from "react";
 
@@ -12,11 +12,6 @@ export default function ScoreModal() {
             handleCloseModal();
         }
     };
-
-    function getUserScore(): number {
-        const userScore = localStorage.getItem('score');
-        return userScore ? parseInt(userScore, 10) : 0;
-    }
 
     if (modals.includes('score')) {
         return (

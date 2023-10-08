@@ -24,7 +24,7 @@ export default function ButtonSequence() {
                 <div className={`flex flex-row gap-8`}>
                     <ButtonRedirect page={"/game"}
                                     title={"JOGAR"}/>
-                    <ButtonRedirect page={""}
+                    <ButtonRedirect page={"/tutorial"}
                                     title={"TUTORIAL"}/>
                 </div>
                 <ButtonRedirect page={"/credits"}
@@ -37,7 +37,7 @@ export default function ButtonSequence() {
                                     page={"/game"}
                                     title={"JOGAR"}/>
                     <ButtonRedirect mobile={true}
-                                    page={""}
+                                    page={"/tutorial"}
                                     title={"TUTORIAL"}/>
                     <ButtonRedirect mobile={true}
                                     page={"/credits"}

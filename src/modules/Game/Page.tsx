@@ -6,7 +6,7 @@ import NewBestScore from "./components/NewBestScore.tsx";
 
 export default function Game() {
     return (
-        <div className={`flex w-screen flex-col items-center justify-between min-h-[700px]`} style={{height: "100svh"}}>
+        <div className={`flex w-screen flex-col items-center justify-between min-h-[700px]`} style={{height: "100dvh"}}>
             <Header/>
             <MainPictureContainer/>
             <LetterContainer/>

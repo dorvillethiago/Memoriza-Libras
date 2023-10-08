@@ -3,7 +3,7 @@ import BackArrow from "./components/BackArrow";
 
 export default function Tutorial() {
     return (
-        <div className={`flex w-screen flex-col items-center min-h-[700px]`} style={{ height: "100svh" }}>
+        <div className={`flex w-screen flex-col items-center min-h-[700px]`} style={{ height: "100dvh" }}>
             <motion.header
                 initial={{ y: 100, opacity: 0}}
                 animate={{ y: 0, opacity: 100}}

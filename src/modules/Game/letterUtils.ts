@@ -9,7 +9,7 @@ export function getRandomLetter(): Letter {
     const randomNumber = Math.floor(Math.random() * Alphabet.length);
     console.log(Alphabet[randomNumber])
     return <Letter>{
-        url: `src/modules/Game/assets/${Alphabet[randomNumber]}.jpeg`,
+        url: `/${Alphabet[randomNumber]}.jpeg`,
         str: Alphabet[randomNumber]
     }
 }

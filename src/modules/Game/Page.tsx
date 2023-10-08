@@ -2,6 +2,7 @@ import Header from "./sessions/Header.tsx";
 import MainPictureContainer from "./sessions/MainPictureContainer.tsx";
 import LetterContainer from "./sessions/LetterContainer.tsx";
 import ScoreModal from "@/modules/Game/components/ScoreModal.tsx";
+import NewBestScore from "./components/NewBestScore.tsx";
 
 export default function Game() {
     return (
@@ -9,7 +10,8 @@ export default function Game() {
             <Header/>
             <MainPictureContainer/>
             <LetterContainer/>
-            <ScoreModal/>
+            <ScoreModal />
+            <NewBestScore/>
         </div>
     )
 }
